@@ -13,7 +13,7 @@ const createDate = (dates, idx) => {
   dates.forEach((item) => {
     tempDate.push(Date.parse(item) / 1000);
   });
-  if (!idx) {
+  if (idx === undefined) {
     const concat = tempDate.sort().join("-");
     return concat.toString();
   } else {
